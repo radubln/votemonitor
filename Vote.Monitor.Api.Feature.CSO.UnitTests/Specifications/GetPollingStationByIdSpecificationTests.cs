@@ -17,6 +17,7 @@ public class GetPollingStationByIdSpecificationTests
 
         var testCollection = new CSOAggregateFaker()
             .Generate(500)
+            .Union(new[] { cso })
             .ToList();
 
         var spec = new GetCSOByNameSpecification(cso.Name.ToString());

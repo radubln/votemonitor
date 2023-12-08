@@ -16,6 +16,7 @@ public class CSOAggregateFaker : AutoFaker<CSOAggregate>
         RuleFor(fake => fake.Id, id ?? Guid.NewGuid());
         RuleFor(fake => fake.Name, fake => name ?? fake.Name.FullName());
         RuleFor(fake => fake.Status, fake => fake.Random.Int(1, 2) == 1 ? CSOStatus.Activated : CSOStatus.Deactivated);
-       
+              
+
     }
 }
